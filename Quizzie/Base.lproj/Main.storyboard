@@ -32,59 +32,94 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalCentering" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="KuC-KJ-2oh">
-                                <rect key="frame" x="16" y="347" width="343" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMc-KY-FYq">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
-                                        <color key="backgroundColor" red="0.010512533113093922" green="0.63806710025380708" blue="0.39228989673381154" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="2qw-Wu-p0o"/>
-                                            <constraint firstAttribute="height" constant="30" id="Hab-TM-OY4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="True">
-                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJM-oC-6h1">
-                                        <rect key="frame" x="223" y="0.0" width="120" height="30"/>
-                                        <color key="backgroundColor" red="0.95730885152284262" green="0.24397450263686365" blue="0.33308200045243402" alpha="0.52381207191780832" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="uqy-7X-Cg1"/>
-                                            <constraint firstAttribute="height" constant="30" id="xLm-ry-f2h"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="False">
-                                            <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxe-av-Jyw">
-                                <rect key="frame" x="16" y="621" width="50" height="30"/>
+                                <rect key="frame" x="16" y="621" width="63" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cgH-2v-kwx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Reset"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZ1-Fz-wk4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-Jo-Ewc">
+                                <rect key="frame" x="16" y="227" width="343" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title=" A value can't be changed later">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTw-KN-5Hk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omF-k6-906">
+                                <rect key="frame" x="16" y="271" width="343" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title=" A value can't be changed later">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qck-BE-B86"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7w4-fc-ihs">
+                                <rect key="frame" x="16" y="315" width="343" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title=" A value can't be changed later">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALg-4d-jbG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-Pq-eq1">
+                                <rect key="frame" x="16" y="359" width="343" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title=" A value can't be changed later">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SWH-0z-rTA"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.80847477791878175" green="0.79872694473067452" blue="0.5438301506568709" alpha="0.77346425513698636" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80602393454272214" green="0.80847477791878175" blue="0.7254713224140068" alpha="0.77346425513698636" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YeH-Pq-eq1" secondAttribute="trailing" constant="16" id="5Ql-l2-F3d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HOY-rQ-pmc" secondAttribute="trailing" constant="35" id="7NM-eF-a3A"/>
+                            <constraint firstItem="2O0-Jo-Ewc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7nT-Qb-joE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OYd-NS-7gW" secondAttribute="bottom" constant="16" id="862-8t-2sd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2O0-Jo-Ewc" secondAttribute="trailing" constant="16" id="9rK-cc-BkW"/>
+                            <constraint firstItem="7w4-fc-ihs" firstAttribute="top" secondItem="omF-k6-906" secondAttribute="bottom" constant="8" id="AH4-0l-wY3"/>
+                            <constraint firstItem="YeH-Pq-eq1" firstAttribute="top" secondItem="7w4-fc-ihs" secondAttribute="bottom" constant="8" id="HKM-u9-N5D"/>
                             <constraint firstItem="Cxe-av-Jyw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Hg6-aR-USh"/>
+                            <constraint firstItem="7w4-fc-ihs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QDa-p5-tkC"/>
                             <constraint firstItem="HOY-rQ-pmc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="QFS-yA-1MB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KuC-KJ-2oh" secondAttribute="trailing" constant="16" id="e7v-6d-hPc"/>
-                            <constraint firstItem="KuC-KJ-2oh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kXu-pD-Eg7"/>
-                            <constraint firstItem="KuC-KJ-2oh" firstAttribute="top" secondItem="HOY-rQ-pmc" secondAttribute="bottom" constant="180" id="lh3-gj-Dxi"/>
+                            <constraint firstItem="omF-k6-906" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QHs-Md-UlZ"/>
+                            <constraint firstItem="7w4-fc-ihs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V0o-ID-FUy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="omF-k6-906" secondAttribute="trailing" constant="16" id="YLr-y2-8cq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7w4-fc-ihs" secondAttribute="trailing" constant="16" id="YqF-6h-SC9"/>
+                            <constraint firstItem="omF-k6-906" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bAw-4O-CXX"/>
+                            <constraint firstItem="2O0-Jo-Ewc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gx6-ss-ZwL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cxe-av-Jyw" secondAttribute="bottom" constant="16" id="mWC-iN-W2J"/>
                             <constraint firstItem="HOY-rQ-pmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="qhG-JA-d6q"/>
+                            <constraint firstItem="YeH-Pq-eq1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rax-am-7Tr"/>
+                            <constraint firstItem="2O0-Jo-Ewc" firstAttribute="top" secondItem="HOY-rQ-pmc" secondAttribute="bottom" constant="60" id="sdH-mt-Bth"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OYd-NS-7gW" secondAttribute="trailing" constant="16" id="tHZ-oG-63i"/>
+                            <constraint firstItem="omF-k6-906" firstAttribute="top" secondItem="2O0-Jo-Ewc" secondAttribute="bottom" constant="8" id="uJ7-2B-pe9"/>
+                            <constraint firstItem="YeH-Pq-eq1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wyc-rE-gIT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="QuestionTextLabel" destination="HOY-rQ-pmc" id="TLa-pA-qhm"/>
+                        <outlet property="firstAnswerBtnLabel" destination="2O0-Jo-Ewc" id="SNj-dh-ep3"/>
+                        <outlet property="fourthAnswerBtnLabel" destination="YeH-Pq-eq1" id="7tC-im-fYf"/>
+                        <outlet property="scoreLabel" destination="OYd-NS-7gW" id="cjr-uJ-jJc"/>
+                        <outlet property="secondAnswerBtnLabel" destination="omF-k6-906" id="pik-BI-8eV"/>
+                        <outlet property="thirdAnswerBtnLabel" destination="7w4-fc-ihs" id="cQV-Ac-Cww"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

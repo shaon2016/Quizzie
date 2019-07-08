@@ -8,9 +8,9 @@
 
 import Foundation
 struct Question {
-    private var qs : String
-    private var answerSets : Array<String>
-    private var correctAnsPosition : Int
+    private(set) public var qs : String
+    private(set) public var answerSets : Array<String>
+    private(set) public var correctAnsPosition : Int
     
     init(qs : String, answerSets : Array<String>, correctAnsPosition : Int) {
         self.qs = qs

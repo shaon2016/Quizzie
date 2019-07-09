@@ -10,8 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     private var allQuestions = QuestionBank()
-    private var currentQuestionPosition = 0
+    private var currentQuestionNumber = 0
     private var pickedAnswerPosition = 0
+    private var yourPoint = 0
     
     @IBOutlet weak var QuestionTextLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
     }
     
    private func viewAtFirstTime() {
-        let question = allQuestions.questions[currentQuestionPosition]
+        let question = allQuestions.questions[currentQuestionNumber]
         QuestionTextLabel.text = question.qs
         scoreLabel.text = "Score: 0"
         firstAnswerBtnLabel.setTitle(question.answerSets[0], for: .normal)
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restartGame(_ sender: UIButton) {
-        currentQuestionPosition = 0
+        currentQuestionNumber = 0
         viewAtFirstTime()
     }
 
@@ -59,17 +60,55 @@ class ViewController: UIViewController {
         }
         
         checkAnswer()
+        currentQuestionNumber = currentQuestionNumber + 1
+        
+        updateView()
+    }
+    
+    private func updateView() {
+        scoreLabel.text = "Score: \(yourPoint)"
+        if currentQuestionNumber < 5
+        {
+            let question = allQuestions.questions[currentQuestionNumber]
+            QuestionTextLabel.text = question.qs
+            firstAnswerBtnLabel.setTitle(question.answerSets[0], for: .normal)
+            secondAnswerBtnLabel.setTitle(question.answerSets[1], for: .normal)
+            thirdAnswerBtnLabel.setTitle(question.answerSets[2], for: .normal)
+            fourthAnswerBtnLabel.setTitle(question.answerSets[3], for: .normal)
+            
+        } else {
+
+            let alert = UIAlertController(title: "Awesome", message: "Do you want to restart the game?", preferredStyle: .alert)
+            
+            let restartAction = UIAlertAction.init(title: "Restart", style: .default) { (UIAlertAction) in
+                self.startOver()
+            }
+            
+            alert.addAction(restartAction)
+            
+            present(alert, animated: true,completion: nil)
+        }
+        
     }
     
     private func checkAnswer() {
-        let correctAnswerPosition = allQuestions.questions[currentQuestionPosition].correctAnsPosition
+        let correctAnswerPosition = allQuestions.questions[currentQuestionNumber].correctAnsPosition
         
         if correctAnswerPosition == pickedAnswerPosition {
+            yourPoint = yourPoint + 1
+        
             print("Got it!")
+            
         }
         else {
             print("Oops! Worng")
         }
+    }
+    
+    private func startOver() {
+        yourPoint = 0
+        currentQuestionNumber = 0
+        updateView()
     }
 }
 

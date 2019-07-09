@@ -39,8 +39,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restartGame(_ sender: UIButton) {
-        currentQuestionNumber = 0
-        viewAtFirstTime()
+        startOver()
     }
 
     // Four answer button added to this action.
@@ -96,12 +95,10 @@ class ViewController: UIViewController {
         
         if correctAnswerPosition == pickedAnswerPosition {
             yourPoint = yourPoint + 1
-        
-            print("Got it!")
-            
+            ProgressHUD.showSuccess("Correct!")
         }
         else {
-            print("Oops! Worng")
+            ProgressHUD.showError("Error!")
         }
     }
     
